@@ -27,6 +27,12 @@ textarea {
     line-height: 15px;
 }
 
+.title-input {
+    width: 300px;
+    font-size: 15px;
+    line-height: 15px;
+}
+
 .sidebar {
     background-color: #f0f0f0;
     height: 100vh;

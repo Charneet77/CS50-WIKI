@@ -1,5 +1,4 @@
 from django.db import models
-from django.db import models
 
 class MarkdownFile(models.Model):
     id = models.BigAutoField(primary_key=True)

@@ -15,6 +15,22 @@ def index(request):
         "entries": util.list_entries()
     })
 
+def add(request):
+    return render(request, "add.html")
+
+def save(request):
+    if request.method == 'POST':
+        title = request.POST['title']
+        print(title)
+        content = request.POST['content']
+
+        util.save_entry(title, content)
+
+        print("Entry Saved")
+        return redirect(f"{title}.md")
+    else:
+        return render(request,'add.html')
+
 def render_markdown(request, filename):
     # Define the path to the markdown files
     md_dir = os.path.join(settings.BASE_DIR, 'entries')
